@@ -31,7 +31,7 @@ dev-install:
 download-cub:
 	mkdir -p data/CUB
 	wget -O data/CUB/images.tgz "https://data.caltech.edu/records/65de6-vp158/files/CUB_200_2011.tgz?download=1"
-	tar --exclude='._*' -zxvf data/CUB/images.tgz -C data/CUB/
+	tar --exclude='._*' --strip-components=1 -zxvf data/CUB/images.tgz -C data/CUB/
 
 # Benchmarks
 
